@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import numpy as np
 
 from mlpy.particleSwarmOptimization.pso import PSO
