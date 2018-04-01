@@ -47,20 +47,25 @@ class Sequence(MultiObjective):
             values, count = np.unique(vert, return_counts=True)
             if values[0] == self.empty:
                 count = count[1:]
+
             if len(count) > 1:
                 valid = False
-                sum -= 1
+                sum -= np.sum(count)
             else:
                 sum += np.sum(count - 1)
 
-        return np.array([- sum, np.sum(padded_position)]), valid
+        values, count = np.unique(self.final_alignment, return_counts=True)
+        spaces = 0
+        if values[0] == self.empty:
+            spaces = count[0]
+
+        return np.array([- sum, spaces]), valid
 
     def printFinalAlignemnt(self):
         for hor in self.final_alignment:
             sequence = ''
             for vert in hor:
-                isSpace = vert == self.empty
-                if isSpace:
+                if vert == self.empty:
                     sequence += '_'
                 else:
                     sequence += vert.decode('utf-8')
