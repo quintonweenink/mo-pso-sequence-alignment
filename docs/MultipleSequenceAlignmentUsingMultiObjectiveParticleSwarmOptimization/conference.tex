@@ -38,14 +38,14 @@ u13176545@tuks.co.za}
 \maketitle
 
 \section{Introduction}
-This paper aims to investigate how to achieve Multiple Sequence Alignment using multi-objective \ac{PSO}. While many multi-objective optimisation techniques exist this paper will investigate the performance of \ac{VEPSO} to optimise the required objectives.
+This paper aims to investigate how to achieve multiple sequence alignment using a multi-objective \ac{PSO}. While many multi-objective optimisation techniques exist this paper will investigate the performance of \ac{VEPSO} to optimise the required objectives.
 
 \section{Background}
 Sequence alignment is a way of arranging the sequences to identify regions of similarity. For this research we will be attempting to align the sequences by identifying multiple objectives and attempting to solve them, namely:
 \begin{itemize}
 	\item maximise the number of vertically aligned characters, while simultaneously
 	\item minimising the number of leading spaces inserted.
-\end{itemize}\\
+\end{itemize}
 
 An example of such a sequence is as follows:
 \begin{lstlisting}
@@ -65,7 +65,7 @@ A possible solution to the above sequence is:
 \subsection{Fitness}
 \noindent The following describes how the fitness will be calculated for each of the objectives
 \subsubsection{Alignment fitness}
-The alignment fitness is calculated by incriminating the fitness each time the same character is aligned. Furthermore the fitness is decreased when difference characters are aligned. The result is then negated in order to make both objectives minimisation problems. A solution who's characters are misaligned is considered in-valid for this research.
+The alignment fitness is calculated by incriminating the fitness each time the same character is aligned. Furthermore the fitness is decreased when different characters are aligned. The result is then negated in order to make both objectives minimisation problems. A solution who's characters are misaligned is considered an in-valid solution for this research.
 
 \subsubsection{Leading space fitness}
 The leading space fitness is calculated by adding the number of spaces that the solution requires.
@@ -151,11 +151,11 @@ $pBest$ and $nBest$ positions were only used as a local or global guide if they 
 
 \subsection{Objectives}
 
-Each of swarms error functions was the fitness of one of the objectives. A good multi-objective optimisation algorithm should be able to solve its own objective while not forgetting about the other swarms objectives.
+Each of the swarm's error functions is the resulting fitness of one of the objectives. A good multi-objective optimisation algorithm should be able to solve its own objective while not forgetting about the other swarms objectives.
 
 \subsection{Boundary Constraint Handling Mechanisms}
 
-The the clamping approach used in this research. If a particle violates a boundary constraint in a specific dimension, then the particles position was clamped to the edge of the constraint. For this research this was specified by the max length of the sequences.
+The the boundary constraint clamping approach used in this research to prevent particles from leaving the search space. If a particle violates a boundary constraint in a specific dimension, then the particles position was clamped to the edge of the constraint. For this research this was specified by the max length of the sequences.
 
 \section{Experiments}
     \subsection{\ac{PSO} configuration}
