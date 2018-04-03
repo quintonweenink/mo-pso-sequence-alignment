@@ -129,6 +129,7 @@ class VEPSO(PSO):
             if (x % sampleSize == 0):
                 trainingErrors.append([self.group_best_objectives, x])
                 trainingErrors2.append([self.group_best_objectives2, x])
+                print(x, self.group_best_objectives, self.group_best_objectives2)
 
         trainingErrors.append([self.group_best_objectives, iterations])
         trainingErrors2.append([self.group_best_objectives2, iterations])

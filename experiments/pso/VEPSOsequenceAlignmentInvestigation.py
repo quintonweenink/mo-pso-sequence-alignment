@@ -14,17 +14,17 @@ NUM_PARTICLES = 50
 INERTIA_WEIGHT = 0.7
 COGNITIVE_CONSTANT = SOCIAL_CONSTANT = 1.4
 
-# sequence = Sequence([['a', 'b', 'c', 'd', 'e', 'f'],
-#                      ['b', 'b', 'd', 'h', 'g'],
-#                      ['c', 'a', 'b', 'f']])
+sequence = Sequence([['a', 'b', 'c', 'd', 'e', 'f'],
+                     ['b', 'b', 'd', 'h', 'g'],
+                     ['c', 'a', 'b', 'f']])
 
 # sequence = Sequence([['a', 'b', 'c', 'd', 'e', 'f', 'a', 'a', 'h'],
 #                      ['f', 'b', 'b', 'd', 'h', 'g', 'h', 'h'],
 #                      ['c', 'a', 'b', 'f', 'f', 'e', 'a']])
 
-sequence = Sequence([['a', 'b', 'c', 'd', 'e', 'f'],
-                     ['g', 'h', 'i', 'j', 'k'],
-                     ['a', 'b', 'c', 'd']])
+# sequence = Sequence([['a', 'b', 'c', 'd', 'e', 'f'],
+#                      ['g', 'h', 'i', 'j', 'k'],
+#                      ['a', 'b', 'c', 'd']])
 
 objectives, valid = sequence.getFitness(np.zeros(sequence.size))
 print("Original (valid =", valid, ") objectives =", objectives)

@@ -1,6 +1,6 @@
 ### Investigating Boundary Constraint Handling Mechanisms for Particle Swarm Optimization
 
-*Abstract:* None
+*Abstract:* Investigate how to achieve Multiple Sequence Alignment using multi-objective particle swarm optimization. While many multi-objective optimisation techniques exist this paper will investigate the performance of vector evaluated particle swarm optimization to optimise the required objectives.
 
 #### Research paper
 
@@ -13,5 +13,6 @@ Research paper is under `/docs`
 
 ##### Running a simulation:
 
-1. Go to the directory of the file
-2. Run `python3 experiments/pso/boundaryConstraintInvestigation.py`
+1. Go to the root directory project
+2. Run `python3 experiments/pso/VEPSOsequenceAlignmentInvestigation.py`
+3. You may need to run `export PYTHONPATH='.'`
