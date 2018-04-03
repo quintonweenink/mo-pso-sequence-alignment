@@ -2,7 +2,7 @@ import numpy as np
 
 from experiments.problems.multiObjective.sequence import Sequence
 
-from src.boundaryConstraints.boundaryConstraintPSO import BoundaryConstraintPSO
+from src.boundaryConstraintPSO import BoundaryConstraintPSO
 from mlpy.numberGenerator.bounds import Bounds
 
 ITERATIONS = 500
